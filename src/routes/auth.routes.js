@@ -79,6 +79,13 @@ router.get('/user', async (req, res) => {
 
 })
 
+router.get('/logout', (req, res) => {
+    res.clearCookie("token")
+    res.status(200).json({
+        message:"logout successfully"
+    })
+})
+
 
 
 module.exports = router
